@@ -12,19 +12,25 @@
 <body>
   <div class="weather-app">
     <header>
-       <form>
-        <input type="search"  placeholder="Enter city.." required />
-        <input type="submit" value="Search"/>
+       <form class="search-form">
+        <input type="search"  placeholder="Enter a city.." class="search-input" required  />
+        <input type="submit" value="Search" class="search-button"/>
        </form> 
     </header>
   <main>
+    <div class="weather-app-data">
     <div>
-    <h1>Paris</h1>
-    <p>Monday 14:49, sunny<br/>
-    Humidity: 66%, Wind:3.13km/h</p>
+    <h1 class="app-city">Paris</h1>
+    <p class="weather-details">Monday 14:49, sunny<br/>
+    Humidity: <strong>66%</strong>, Wind:<strong>3.13km/h</strong></p>
     </div>
-    <div>🌞21°C</div>
-</main>
+    <div class="weather-temp-container">
+    <div class="temperature-icon">🌞</div>
+    <div class="temperature-value">21</div>
+    <div class="temperature-unit">°C</div>
+    </div>
+    </div>
+  </main>
 
 
   <footer>
@@ -32,6 +38,7 @@
     <a href ="https://github.com/Idesta1/my-weatherApp" target="_blank"> Github</a> and hosted on,
     <a href ="https://app.netlify.com/sites/my-shecode-weatherapp/overview" target="_blank"> Netlify</a>
   </footer>  
+
 </div>
 </body>
 </html>
