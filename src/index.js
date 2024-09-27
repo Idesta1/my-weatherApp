@@ -12,18 +12,51 @@ let apiKey="8e95b71ct703a6fac0458b466ebo4b0b";
 let apiUrl=`https://api.shecodes.io/weather/v1/current?query=${city}&key=${apiKey}&units=metric`;
 axios.get(apiUrl).then(changeWeather);
 }
-
 function showSubmit(event){
     event.preventDefault();
   let searchInput=document.querySelector("#search-input-app");
 
    
    searchCity(searchInput.value);
+   
+  
 
 }
-
 
 let searchFormElement=document.querySelector("#search-form-app");
 searchFormElement.addEventListener ("submit", showSubmit);
 
-searchCity("Paris");
+searchCity("city");
+
+let date = new Date();
+weatherElement=document.querySelector("#current-time");
+weatherElement.innerHTML= formatDate(date);
+
+function formatDate(date){
+let days = [
+    "Sunday",
+    "Monday",
+    "Tuesday",
+    "Wednesday",
+    "Thursday",
+    "Friday",
+    "Saturday",
+  ];
+
+  let day = days[date.getDay()];
+  let hours = date.getHours();
+  let minutes = date.getMinutes();
+
+  if (minutes < 10) {
+    minutes = `0${minutes}`;
+  }
+
+  return  `${day} ${hours}:${minutes}`;
+}
+
+
+ 
+
+
+
+ 
